@@ -37,7 +37,7 @@ public class base {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+   //Need to fix issue
 	}
 
 	@Before
@@ -46,7 +46,7 @@ public class base {
 		String browserName = pro.getProperty("browser");
 		if (browserName.equals("Chrome")) {
 			ChromeOptions options=new ChromeOptions();
-			options.addArguments("--remote-allow-origins=*");
+			options.addArgument("detach",true);
 			 driver = new ChromeDriver(options);
 		} else if (browserName.equals("firefox")) {
 			driver = new FirefoxDriver();
